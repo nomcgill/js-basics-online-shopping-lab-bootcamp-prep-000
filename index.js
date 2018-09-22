@@ -45,14 +45,18 @@ function viewCart() {
 
 function total() {
 var totalArray = []
+if (getCart().length > 0){
   for (var i = 0; i < cart.length;i++){
     totalArray.push(
       parseInt(`${getCart()[i].itemPrice}`)
       )
-  }
+    }
   var sum = totalArray.reduce((x,y) => x + y)
   return sum
-
+}
+else{
+  return 0
+}
 }
 
 function removeFromCart(item) {
