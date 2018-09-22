@@ -54,9 +54,7 @@ if (getCart().length > 0){
   var sum = totalArray.reduce((x,y) => x + y)
   return sum
 }
-else{
-  return 0
-}
+return 0
 }
 
 function removeFromCart(item) {
