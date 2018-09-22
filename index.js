@@ -70,10 +70,13 @@ function removeFromCart(item) {
 
 
 function placeOrder(cardNumber) {
-  if 
-  
-  return `Sorry, we don't have a credit card on file for you.`
+  if (cardNumber === undefined) {
+    return (`Sorry, we don't have a credit card on file for you.`);
+  } else {
+    return (`Your total cost is ${totalValue()}, which will be charged to the card ${cardNumber}.`);
+    cart = [];
+    return cart;
+  }
 }
-
 
 
