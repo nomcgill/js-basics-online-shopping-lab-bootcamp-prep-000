@@ -59,17 +59,14 @@ else {
 }
 
 function removeFromCart(item) {
-  theArray = []
-  for (var i = 0; i <cart.length; i++) {
-    theArray.unshift(cart[i])
-    if (theArray.indexOf(item) === -1 ){
-      return `That item is not in your cart.`
-      }
-    else {
-      theArray.shift()
-      }
-    return getCart()
+  for (var i = 0; i < getCart().length; i++) {
+    if (getCart()[i].itemName === item){
+      getCart().splice(i,1);
+      return getCart();
     }
+     else {
+       return `That item is not in your cart.`}
+  }
 }
 
 
