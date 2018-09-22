@@ -45,7 +45,7 @@ function viewCart() {
 
 function total() {
 var totalArray = []
-if (cart.length === 0){
+if (getCart().length === 0){
   return 0}
 else {
   for (var i = 0; i < cart.length;i++){
